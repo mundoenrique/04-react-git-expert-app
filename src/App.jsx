@@ -5,7 +5,8 @@ export default function App() {
 	const [categories, setCategories] = useState(['One Punch', 'Dragon Ball']);
 
 	const onAddCtegory = (newCategory) => {
-		// dos formas
+		if (categories.includes(newCategory)) return;
+		// dos formas de actualizar el estado
 		// setCategories((cat) => [inputValue, ...cat]);
 		setCategories([newCategory, ...categories]);
 	};

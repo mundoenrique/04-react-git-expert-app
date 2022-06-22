@@ -4,14 +4,19 @@ import AddCategory from './components/AddCategory';
 export default function App() {
 	const [categories, setCategories] = useState(['One Punch', 'Dragon Ball']);
 
-	const onAddCtegory = () => {
-		setCategories(['Valorant', ...categories]);
+	const onAddCtegory = (newCategory) => {
+		// dos formas
+		// setCategories((cat) => [inputValue, ...cat]);
+		setCategories([newCategory, ...categories]);
 	};
 
 	return (
 		<>
 			<h1>App</h1>
-			<AddCategory setCategories={setCategories} />
+			<AddCategory
+				setCategories={setCategories}
+				onNewCategory={(value) => onAddCtegory(value)}
+			/>
 
 			<ol>
 				{categories.map((category, index) => {

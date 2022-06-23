@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function AddCategory({ setCategories, onNewCategory }) {
+export function AddCategory({ setCategories, onNewCategory }) {
 	const [inputValue, setInputValue] = useState('');
 
 	const onInputChange = ({ target }) => {

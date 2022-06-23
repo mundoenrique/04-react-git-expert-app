@@ -19,7 +19,7 @@ export default function App() {
 				setCategories={setCategories}
 				onNewCategory={(value) => onAddCtegory(value)}
 			/>
-			{categories.map((category, index) => (
+			{categories.map((category) => (
 				<GifGrid key={category} category={category} />
 			))}
 		</>
